@@ -1,3 +1,5 @@
+"use client"
+
 import Sidebar from '@/components/sidebar/Sidebar'
 import html from '../../../public/assets/html.png'
 import Image from 'next/image'
@@ -5,12 +7,15 @@ import { GoTrophy } from "react-icons/go";
 import { CiCalendar } from "react-icons/ci";
 import { IoShieldCheckmark } from "react-icons/io5";
 import { SlGraph } from "react-icons/sl";
+import { Line, LineChart } from 'recharts';
+import Linechart from '@/components/graph/Linechart';
+import Circlechart from '@/components/graph/Circlechart';
 
 export default function Skills() {
     return (
         <div className='flex justify-around'>
             <Sidebar />
-            <div className='border-l h-screen pl-10 pt-7'>
+            <div className='border-l min-h-screen pl-10 pt-7'>
                 <h2 className='text-gray-600 text-lg'>Skill Test</h2>
                 <div className='border rounded-lg mt-5 flex items-center gap-3 p-3'>
                     <Image
@@ -22,6 +27,8 @@ export default function Skills() {
                         <h5 className='text-lg font-bold'>Hyper Text Markup Language</h5>
                         <p className='text-base text-gray-600'>Question: 08 | Duration : 15 mins | Submitted on 12 July 2018</p>
                     </div>
+
+
                     <button className='border-2 border-black bg-blue-700 text-white px-4 py-2 rounded-lg'>Update</button>
                 </div>
 
@@ -52,8 +59,8 @@ export default function Skills() {
                     </div>
                 </div>
 
-                <div className='border rounded-lg mt-5 p-3 pl-6'>
-                    <div className='flex items-center justify-between'>
+                <div className='border rounded-lg mt-5 p-3 pl-6 pr-6'>
+                    <div className='flex items-center justify-between mb-3'>
                         <div>
                             <h5 className='text-lg font-bold mb-3'>Comparison Graph</h5>
                             <p className='text-base text-gray-600 max-w-[35rem]'>
@@ -62,9 +69,7 @@ export default function Skills() {
                         </div>
                         <SlGraph className='rounded-full bg-slate-700 text-white p-2' size={45} />
                     </div>
-                    <div>
-                        Hello
-                    </div>
+                    <Linechart />
                 </div>
             </div>
 
@@ -120,7 +125,7 @@ export default function Skills() {
                     </div>
                 </div>
 
-                <div className='border rounded-lg mt-5 p-3 pl-6'>
+                <div className='border rounded-lg mt-5 p-3 pl-6 mb-5'>
                     <div className='flex justify-between'>
                         <h5 className='text-lg font-bold mb-8'>Question Analysis</h5>
                         <span className='font-bold text-blue-400'>10/15</span>
@@ -129,10 +134,7 @@ export default function Skills() {
                         <span className='font-bold'>You scored 10 question correct out of 15.</span > However it still needs some improvements.
                     </p>
 
-                    <div>
-
-
-                    </div>
+                    <Circlechart />
                 </div>
             </div>
 
