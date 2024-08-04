@@ -13,9 +13,9 @@ import Circlechart from '@/components/graph/Circlechart';
 
 export default function Skills() {
     return (
-        <div className='flex justify-around'>
+        <div className='flex'>
             <Sidebar />
-            <div className='border-l min-h-screen pl-10 pt-7'>
+            <div className='border-l min-h-screen pl-10 pt-7 pr-7'>
                 <h2 className='text-gray-600 text-lg'>Skill Test</h2>
                 <div className='border rounded-lg mt-5 flex items-center gap-3 p-3'>
                     <Image
